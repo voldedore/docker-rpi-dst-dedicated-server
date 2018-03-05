@@ -11,8 +11,8 @@ RUN echo "resolvconf resolvconf/linkify-resolvconf boolean false" | debconf-set-
 RUN apt-get update && apt-get install -y apt-utils wget curl
 
 # Install DS for DST (@see http://dontstarve.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers)
-RUN dpkg --add-architecture i386 
-RUN apt-get update && && apt-get install -y lib32gcc1 lib32stdc++6 libcurl4-gnutls-dev:i386
+RUN dpkg --add-architecture i386
+RUN apt-get update && apt-get install -y lib32gcc1 lib32stdc++6 libcurl4-gnutls-dev:i386
 
 # Create user to run the server
 RUN useradd -m steam
