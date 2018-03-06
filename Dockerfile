@@ -11,8 +11,8 @@ RUN echo "resolvconf resolvconf/linkify-resolvconf boolean false" | debconf-set-
 RUN apt-get update && apt-get install -y apt-utils wget curl
 
 # Install DS for DST (@see http://dontstarve.wikia.com/wiki/Guides/Don%E2%80%99t_Starve_Together_Dedicated_Servers)
-#RUN dpkg --add-architecture i386
-# update
+RUN dpkg --add-architecture i386
+RUN apt-get update && apt-get install -y lib32gcc1 libcurl3-gnutls:i386 lib32stdc++6
 # lib32gcc1
 # libcurl3-gnutls:i386
 # lib32stdc++6
